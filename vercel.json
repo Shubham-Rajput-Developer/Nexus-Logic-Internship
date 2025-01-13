@@ -5,6 +5,12 @@
         "destination": "/landing1",
         "permanent": true
       }
+    ],
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }
     ]
   }
   
