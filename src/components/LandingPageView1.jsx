@@ -166,20 +166,6 @@ const LandingPageView1 = () => {
             "date": "2024-11-15",
             "location": "Los Angeles"
           }
-        ],
-        "testimonials": [
-          {
-            "testimonialId": "test1",
-            "name": "John Doe",
-            "message": "Vishal's music is truly inspiring!",
-            "photo": "https://example.com/john_doe.jpg"
-          },
-          {
-            "testimonialId": "test2",
-            "name": "Jane Smith",
-            "message": "An amazing artist with a soulful voice.",
-            "photo": "https://example.com/jane_smith.jpg"
-          }
         ]
       }
 
@@ -219,7 +205,7 @@ const LandingPageView1 = () => {
     );
   }
 
-  const { artistPage, performances, merchandise, songSales, musicVideos, fanMessages, supportPage, musicPlatformLinks, upcomingEvents, testimonials } = landingPageData;
+  const { artistPage, performances, merchandise, songSales, musicVideos, fanMessages, supportPage, musicPlatformLinks, upcomingEvents } = landingPageData;
 
 
 
@@ -685,43 +671,6 @@ const LandingPageView1 = () => {
                       </CardContent>
                     </motion.div>
                   ))}
-                </motion.div>
-              </div>
-
-              {/* Testimonials Section */}
-              <div id="testimonials">
-                <motion.div
-                  className="p-6 max-w-3xl mx-auto bg-white bg-opacity-30 backdrop-blur-lg rounded-lg shadow-lg mb-8 hover:shadow-xl transition-shadow duration-300"
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <h2 className="text-3xl font-bold text-center text-gray-800 mb-6"><MessageCircle className="w-6 h-6 mr-2 inline" /> Testimonials</h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {testimonials.map((testimonial) => (
-                      <motion.div
-                        key={testimonial.testimonialId}
-                        className="bg-white bg-opacity-90 rounded-lg shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300"
-                        whileHover={{ scale: 1.05 }}
-                      >
-                        <div className="h-48">
-                          <img
-                            src={testimonial.photo}
-                            alt={testimonial.name}
-                            className="object-cover w-full h-full"
-                          />
-                        </div>
-                        <div className="p-4 flex-grow flex flex-col justify-between">
-                          <div>
-                            <h3 className="text-xl font-bold mb-2 text-gray-800">{testimonial.name}</h3>
-                            <p className="text-sm text-gray-600">
-                              {testimonial.message}
-                            </p>
-                          </div>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
                 </motion.div>
               </div>
             </ScrollArea>
