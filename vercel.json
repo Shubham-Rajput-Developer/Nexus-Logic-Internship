@@ -4,7 +4,13 @@
         "source": "/",
         "destination": "/landing1",
         "permanent": true
+      },
+      {
+        "source": "/landing2",
+        "destination": "/landing2",
+        "permanent": true
       }
+  
     ],
     "rewrites": [
       {
